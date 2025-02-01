@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleform.css">
+    <title>Form</title>
+</head>
+
+<body>
+    <h1>Резюме</h1>
+    <h2>Общая информация</h2>
+    <form action="index.html" method="post">
+        <label for="surname" class="req">Фамилия</label>
+        <input type="text" id="surname" placeholder="Введите фамилию" required><br>
+
+        <label for="name" class="req">Имя</label>
+        <input type="text" id="name" placeholder="Введите имя" required><br>
+
+        <label for="dadname">Отчество</label>
+        <input type="text" id="dadname" placeholder="Введите отчество"><br>
+
+        <label for="data" class="req">Дата рождения</label>
+        <input type="date" id="data" class="dat"><br>
+
+        <label for="floor">Выберите пол</label>
+        <select id="floor" class="dat">
+            <option value="woman">женский</option>
+            <option value="man">мужской</option>
+        </select><br>
+
+        <label for="photo">Вставьте свое фото</label>
+        <input id="photo" type="file"><br>
+
+        <h2>Контактная информация</h2>
+
+        <label for="tel" class="req">Телефон</label>
+        <input type="tel" id="tel" placeholder="00-000-0000" maxlength="9" required><br>
+
+        <label for="email">Электронная почта</label>
+        <input type="email" id="email" placeholder="voland1234@gmail.com"><br>
+
+        <label for="address">Адрес проживания</label>
+        <input type="text" id="address" placeholder="ул.Ленина, 54-23"><br>
+
+        <label for="city">Город проживания</label>
+        <select id="city"
+            onchange="document.getElementById('textInput').style.display = this.value === 'other' ? 'block' : 'none';">
+            <option value="option1">Минск</option>
+            <option value="option2">Гродно</option>
+            <option value="option3">Витебск</option>
+            <option value="option4">Брест</option>
+            <option value="option5">Гомель</option>
+            <option value="option6">Могилев</option>
+            <option value="other">Другой...</option>
+        </select>
+        <input type="text" id="textInput" class="cit" placeholder="Введите свой город"><br>
+
+        <h2>Образование</h2>
+
+        <label for="higher">Высшее (аббревиатура)</label>
+        <input type="text" id="higher" placeholder="БГУИР"><br>
+
+        <label for="average">Среднее</label>
+        <input type="text" id="average" placeholder="Название и номер школы"><br>
+
+        <label for="add">Дополнительно</label><br>
+        <textarea id="add" class="Whiteboard" placeholder="|"></textarea><br>
+
+        <label for="course">Курсы</label><br>
+        <textarea id="course" class="Whiteboard" placeholder="|"></textarea><br>
+
+        <h2>Карьера</h2>
+
+        <label for="work1"><i>1-ое место работы</i></label>
+        <input type="text" id="work1" placeholder="Предприятие"><br>
+        <label for="date_begginning1">Дата начала</label>
+        <input type="date" class="dat" id="date_begginning1"><br>
+        <label for="date_end1">Дата окончания</label>
+        <input type="date" class="dat" id="date_end1"><br>
+
+        <label for="work2"><i>2-ое место работы</i></label>
+        <input type="text" id="work2" placeholder="Предприятие"><br>
+        <label for="date_begginning2">Дата начала</label>
+        <input type="date" class="dat" id="date_begginning2"><br>
+        <label for="date_end2">Дата окончания</label>
+        <input type="date" class="dat" id="date_end2"><br>
+
+        <label for="work3"><i>3-ое место работы</i></label>
+        <input type="text" id="work3" placeholder="Предприятие"><br>
+        <label for="date_begginning3">Дата начала</label>
+        <input type="date" class="dat" id="date_begginning3"><br>
+        <label for="date_end3">Дата окончания</label>
+        <input type="date" class="dat" id="date_end3"><br>
+
+        <h3><label for="myself">О себе</label></h3>
+        <textarea class="myself" id="myself" placeholder="|"></textarea><br><br>
+        <input type="submit" class="button">
+        <input type="reset" class="button">
+    </form>
+</body>
+
+</html>
